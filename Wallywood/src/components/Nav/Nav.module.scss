@@ -1,0 +1,68 @@
+@use "../../styles/_variables" as vars;
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100px;
+
+  width: 95%;
+  margin: 0 auto;
+
+  list-style: none;
+  line-height: normal;
+  color: brown;
+  background-color: vars.$content-background;
+
+  font-family: vars.$font-heading;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+
+  h1 {
+
+    color: vars.$heading-color;
+    font-size: 54px;
+    font-weight: 900;
+  }
+
+
+  ul {
+    display: flex;
+    gap: 6rem;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      text-decoration: none;
+
+
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        transition: transform 0.2s ease-in-out;
+
+        &:not(.active):hover {
+          transform: scale(1.1);
+        }
+      }
+
+      a.active {
+        // text-decoration: underline;
+        transform: scale(1.1);
+        text-transform: bold;
+        transition: transform 0.2s ease-in-out;
+      }
+
+
+    }
+  }
+
+
+
+
+}

@@ -1,0 +1,6 @@
+@use "../../styles/_variables" as vars;
+
+.content {
+    width: 100%;
+    background-color: vars.$content-background;
+}

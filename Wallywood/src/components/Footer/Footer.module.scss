@@ -1,0 +1,61 @@
+@use "../../styles/_variables" as vars;
+
+
+.footer {
+
+
+    width: 100%;
+    height: 150px;
+
+    background-color: vars.$content-background;
+    color: black;
+
+
+    .contentWrapper {
+        display: flex;
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15rem;
+        border-top: 1px solid black;
+
+    }
+
+    div:nth-child(3) {
+        margin-left: auto;
+    }
+
+
+    h4 {
+        font-size: vars.$font-md;
+        font-family: vars.$font-heading;
+        margin: 20px 0;
+    }
+
+    h3 {
+        color: vars.$heading-color;
+        font-size: vars.$font-lg;
+        font-family: vars.$font-heading
+    }
+
+    p {
+        font-size: vars.$font-md;
+        font-family: vars.$font-text;
+        cursor: pointer;
+        line-height: 25px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+
+    .footer img {
+        filter: invert(1);
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+}

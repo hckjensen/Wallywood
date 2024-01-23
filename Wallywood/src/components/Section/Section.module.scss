@@ -1,0 +1,123 @@
+@use "../../styles/_variables" as vars;
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 140px;
+    margin-top: 100px;
+    height: 700px;
+
+    .sectionArticle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 8px solid vars.$blue-dark;
+        padding: 0 100px;
+        border-right: none;
+
+        h3 {
+            font-size: vars.$font-xl;
+            font-family: vars.$font-family-jura;
+            color: vars.$blue;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        p {
+            font-family: vars.$font-family-inter;
+            font-size: vars.$font-md;
+            margin: 50px 0;
+        }
+
+
+
+    }
+
+    .sectionImage {
+        overflow: hidden;
+        border: 8px solid vars.$blue-dark;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
+        }
+    }
+
+
+    @media (max-width: 500px) {
+        display: flex;
+        margin: 0;
+
+
+
+
+        .sectionArticle {
+            border: none;
+            padding: 30px;
+
+            h3 {
+                font-size: vars.$font-lg;
+                font-family: vars.$font-family-jura;
+                color: vars.$blue;
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+                padding: 0;
+                margin: 30px 0;
+            }
+
+        }
+
+        .sectionImage {
+            display: none;
+            border: none;
+        }
+
+
+    }
+
+    @media (max-width:850px) {
+        display: flex;
+        margin: 0;
+        height: auto;
+
+
+
+
+        .sectionArticle {
+            border: none;
+            padding: 30px;
+
+            h3 {
+                font-size: vars.$font-lg;
+                font-family: vars.$font-family-jura;
+                color: vars.$blue;
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+                padding: 0;
+                margin: 30px 0;
+            }
+
+        }
+
+        .sectionImage {
+            display: none;
+            border: none;
+        }
+    }
+
+
+    @media (max-width: 1200px) {
+        display: flex;
+        margin: 30px;
+        height: auto;
+
+    }
+}
