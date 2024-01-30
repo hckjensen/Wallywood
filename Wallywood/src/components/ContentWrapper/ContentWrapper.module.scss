@@ -1,0 +1,16 @@
+@use "../../styles/_variables" as vars;
+
+
+
+
+.contentWrapper {
+    padding: 0 40px;
+    width: 100%;
+    background-color: vars.$content-background;
+
+    h3 {
+        color: vars.$heading-color;
+        font-family: vars.$font-heading;
+        font-size: vars.$font-lg;
+    }
+}

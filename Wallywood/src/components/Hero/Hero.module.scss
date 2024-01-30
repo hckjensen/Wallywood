@@ -1,0 +1,12 @@
+@use "../../styles/_variables" as vars;
+
+.hero {
+    width: 100%;
+    background-color: vars.$content-background;
+    padding: 30px 40px;
+
+    .banner {
+        border-radius: 5px;
+        width: 100%;
+    }
+}
