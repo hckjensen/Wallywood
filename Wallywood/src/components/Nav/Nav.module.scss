@@ -54,6 +54,7 @@
       a.active {
         // text-decoration: underline;
         transform: scale(1.1);
+        color: vars.$heading-color;
         text-transform: bold;
         transition: transform 0.2s ease-in-out;
       }

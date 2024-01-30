@@ -1,8 +1,8 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { useEffect } from "react";
-import GenreList from "../../components/ProductList/GenreList";
 import ContentWrapper from "../../components/ContentWrapper/ConterWrapper";
+import ProductComponent from "../../components/ProductList/ProductMain";
 
 const ProductPage = () => {
     useEffect(() => { document.title = 'Wallywood' }, []);
@@ -11,7 +11,7 @@ const ProductPage = () => {
         <>
             <Header />
             <ContentWrapper heading="Plakater">
-                <GenreList />
+                <ProductComponent />
             </ContentWrapper>
 
             <Footer />

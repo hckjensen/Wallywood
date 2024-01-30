@@ -4,13 +4,14 @@
 
 
 .contentWrapper {
-    padding: 0 40px;
+    padding: 20px 40px;
     width: 100%;
     background-color: vars.$content-background;
 
     h3 {
         color: vars.$heading-color;
         font-family: vars.$font-heading;
-        font-size: vars.$font-lg;
+        font-size: vars.$font-xl;
+        font-weight: 500;
     }
 }

@@ -1,0 +1,128 @@
+@use "../../styles/_variables" as vars;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+
+.container {
+
+    margin: 0 auto;
+}
+
+.productList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7rem;
+
+
+    .productCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 5px;
+        // margin: 20px;
+        padding: 20px;
+        width: 300px;
+        height: 700px;
+
+
+        img {
+
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            text-transform: capitalize;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        p {
+
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: transparent;
+
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+h4 {
+    font-size: 24px;
+}
+
+.navList {
+    margin-left: 20px;
+    border-right: 2px solid #D1B3A7;
+
+    li {
+        list-style: none;
+        margin-top: 4px;
+
+
+        a {
+            text-decoration: none;
+            color: vars.$heading-color;
+
+
+        }
+
+        a.active {
+            color: vars.$background;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        text-decoration: underline;
+        color: vars.$heading-color;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+
+    .expandButton {
+
+        background-color: transparent;
+        border: none;
+        text-decoration: underline;
+        color: vars.$heading-color;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 20px;
+
+    }
+
+}
