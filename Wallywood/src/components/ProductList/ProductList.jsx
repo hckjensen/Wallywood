@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const [displayCount, setDisplayCount] = useState(9);
+    const [sortOption, setSortOption] = useState('none');
     const { genre } = useParams();
 
     useEffect(() => {
@@ -19,12 +20,30 @@ const ProductList = () => {
             .catch(error => console.error(error));
     }, [genre]);
 
-    const displayedProducts = products.slice(0, displayCount);
+    const displayedProducts = products
+        .slice(0, displayCount)
+        .sort((a, b) => {
+            if (sortOption === 'lowToHigh') {
+                return a.price - b.price;
+            } else if (sortOption === 'highToLow') {
+                return b.price - a.price;
+            } else {
+                return 0;
+            }
+        });
 
 
     return (
         <>
             <div className={styles.container}>
+                <div className={styles.sortContainer}>
+                    <label htmlFor="sort">Sorter: </label>
+                    <select id="sort" value={sortOption} onChange={e => setSortOption(e.target.value)}>
+                        <option value="none">Title</option>
+                        <option value="lowToHigh">Low to High</option>
+                        <option value="highToLow">High to Low</option>
+                    </select>
+                </div>
                 <div className={styles.productList}>
                     {displayedProducts.map(product => (
                         <div key={product.id} className={styles.productCard}>
