@@ -1,0 +1,15 @@
+@use "../../styles/_variables" as vars;
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input {
+        height: 20px;
+    }
+
+    .button {
+        width: 100px;
+    }
+}
